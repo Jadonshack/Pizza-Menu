@@ -1,26 +1,29 @@
 // Global variables
 var crust = document.getElementById('crust');
 var sauce = document.getElementById('sauce');
+
 // toppings array
 var toppings = [];
+
 // event listener
 var formButton = document.getElementById('btn');
-formButton.addEventListener("click", function(event){
-event.preventDefault();
-var top1 = document.getElementById('top1').value;
-var top2 = document.getElementById('top2').value;
-var top3 = document.getElementById('top3').value;
+formButton.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    var top1 = document.getElementById('top1').value;
+    var top2 = document.getElementById('top2').value;
+    var top3 = document.getElementById('top3').value;
+    toppings.push(top1, top2, top3)
 
 });
 
-function calculateTotal(toppingArray) {  
+function calculateTotal(toppings) {  
     let total = 0; 
     let toppingCost = 2.50; 
     let baseCost = 5.50; // cost of crust and sauce
 
     // order string concatenation
-    
-
+    let orderString = (crust + " pizza with " + sauce);
     let toppingString = "Toppings: ";
 
     // For Loop

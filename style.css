@@ -1,0 +1,65 @@
+body {
+     font-family: 'Barlow', sans-serif;
+    background-color: rgb(238,238,238);
+    color: rgb(47 157 171);
+}
+
+h1 {
+    text-align: center;
+    color: white; 
+    background-color: rgb(37 126 137);
+    padding: .5em;
+    width: 500px;
+    margin: 10% auto;
+    margin-bottom: 90px;
+    margin-top: 50px;
+}
+
+h3 {
+    color: rgb(251,105,98);
+}
+
+div {
+   background-color: rgb(225 225 225);
+}
+
+.createOrder {
+    text-align: center;
+    border: .2em solid black;
+    border-radius: 1em;
+    width: 800px;
+    font-size: 1.15em;
+    margin: 10% auto;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.form {
+    text-align: center;
+    border: .2em solid black;
+    border-radius: 1em;
+    width: 800px;
+    line-height: 2em;
+    margin: 10% auto;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}   
+
+#btn {
+    margin: 20px;
+}
+
+#order {
+    color: black;
+    border: .2em solid black;
+    border-radius: 1em;
+    width: 800px;
+    font-size: 1.1em;
+    padding-left: 1.5em;
+    margin: 10% auto;
+    margin-top: 25px;
+}
+
+#salesPara {
+    margin-bottom: 0;
+}
