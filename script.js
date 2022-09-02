@@ -1,6 +1,6 @@
 // Global variables
-var crust = document.getElementById('Fuvck').value;
-var sauce = document.getElementById('sauce').value;
+var crust = document.getElementById('crust');
+var sauce = document.getElementById('sauce');
 
 // toppings array
 var toppingArray = [];
@@ -16,11 +16,12 @@ formButton.addEventListener("click", function(event){
 
     toppingArray.push(top1, top2, top3);
 
-    var toppings = document.getElementById('toppings');
+    calculateTotal(toppingArray)
+    // var toppings = document.getElementById('toppings');
     
-    toppings.innerHTML = toppingArray;
+    // toppings.innerHTML = toppingArray;
 
-    console.log(toppingArray);
+    // console.log(toppingArray);
 
 });
 
@@ -40,30 +41,32 @@ function calculateTotal(toppingArray) {
     let baseCost = 5.50; // cost of crust and sauce
 
     // order string concatenation
-    let orderString = crust + " pizza with " + sauce;
+    let orderString = crust.value + " pizza with " + sauce.value;
     let toppingString = "Toppings: ";
 
     // For Loop
-    for (var i = 0; i < toppingArray; i++) {
-        total == total + toppingCost;
-        toppingString == toppingString + toppingArray.length;
-    }
+    for (var i = 0; i < toppingArray.length; i++) {
+        if (toppingArray[i] != "") {
+        total = total + toppingCost;
+        toppingString = toppingString + toppingArray[i];
+        console.log(toppingArray);
+    }}
+    // Check if topping is filled
+
     // total = baseCost + cost of all toppings
         total = total + baseCost;
-    // set DOM total += total   
+    // set DOM total += total
         var totalDiv = document.getElementById('total');
         totalDiv.innerHTML += total;
-    // use DOM: = orderString   
+    // use DOM: = orderString
         var pizzaOrder = document.getElementById('pizzaOrder');
         pizzaOrder.innerHTML = orderString;
-    // use DOM: = toppingString 
+    // use DOM: = toppingString
         var toppingsPara = document.getElementById('toppings');
-        toppingsPara.innerHTML = toppingString;
+        toppingsPara.innerHTML += toppingString;
+
     //Console logs for code checks
-    console.log(orderString);
-    console.log(toppingString);
-    console.log(toppingsArray);
-    console.log(total);
+    console.log(orderString, total, toppingString, toppingArray);
 }
 
 console.log(crust);
