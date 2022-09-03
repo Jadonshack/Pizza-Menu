@@ -17,23 +17,8 @@ formButton.addEventListener("click", function(event){
     toppingArray.push(top1, top2, top3);
 
     calculateTotal(toppingArray)
-    // var toppings = document.getElementById('toppings');
-    
-    // toppings.innerHTML = toppingArray;
-
-    // console.log(toppingArray);
 
 });
-
-// var toppingsStart = ("Toppings: ")
-
-// for (var i = 0; i < toppings.length; i++) {
-//     toppingsStart += toppings[i];
-//     if (i == toppings.length - 1) {
-//         } else {
-//            toppingsStart += ", ";
-//         }
-// }
 
 function calculateTotal(toppingArray) {  
     let total = 0; 
@@ -50,6 +35,10 @@ function calculateTotal(toppingArray) {
         total = total + toppingCost;
         toppingString = toppingString + toppingArray[i];
         console.log(toppingArray);
+    }
+    if (i == toppingArray.length -1) {
+    } else {
+        toppingString += ", ";
     }}
     // Check if topping is filled
 
@@ -64,9 +53,4 @@ function calculateTotal(toppingArray) {
     // use DOM: = toppingString
         var toppingsPara = document.getElementById('toppings');
         toppingsPara.innerHTML += toppingString;
-
-    //Console logs for code checks
-    console.log(orderString, total, toppingString, toppingArray);
 }
-
-console.log(crust);
